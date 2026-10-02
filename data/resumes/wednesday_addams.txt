@@ -1,0 +1,8 @@
+Wednesday Addams
+Email: wednesday.addams@example.com
+Location: Nevermore Academy, Jericho
+
+3 years of experience developing web applications.
+
+Technical Skills:
+JS, React.js, NodeJS, Postgres, Git.

@@ -1,0 +1,8 @@
+Mary Jane Watson
+Email: mj.watson@example.com
+Location: New York
+
+2 years of experience developing predictive models and data-processing pipelines.
+
+Technical Skills:
+Python, Pandas, NumPy, Scikit-learn, TensorFlow, SQL, Git.
