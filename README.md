@@ -48,9 +48,7 @@ pip install -r requirements.txt
 
 ## Team
 
-- Alejandro - *(code / group)*
-- *(member 2)*
-- *(member 3)*
+- Brayan Alejandro Jimenez Timana - A00430989
 
 ## IDE
 
