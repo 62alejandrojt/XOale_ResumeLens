@@ -24,12 +24,13 @@ This project is the Integrative Task 1 of *Computación y Estructuras Discretas 
 ## Project structure
 
 ```
-docs/          design documents (Markdown)
-src/           Python source code
-tests/         unit tests
-data/resumes/  sample resumes (.txt)
-output/        generated HTML / Markdown files
+docs/     design documents (Markdown)
+src/      Python source code
+tests/    unit tests and sample resumes (tests/resumes/)
 ```
+
+Generated HTML / Markdown profiles are saved in `output/`, which is created
+when the program runs and is not part of the repository.
 
 ## Requirements
 

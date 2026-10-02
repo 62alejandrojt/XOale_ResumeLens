@@ -1,8 +1,17 @@
 Mary Jane Watson
 Email: mj.watson@example.com
+Phone: 315 987 6543
 Location: New York
 
+Summary:
 2 years of experience developing predictive models and data-processing pipelines.
+Interested in machine learning and deep learning.
+
+Experience:
+- Junior Data Scientist at Daily Bugle Analytics (2 years)
+
+Education:
+- M.Sc. in Data Science, Empire State University
 
 Technical Skills:
 Python, Pandas, NumPy, Scikit-learn, TensorFlow, SQL, Git.
