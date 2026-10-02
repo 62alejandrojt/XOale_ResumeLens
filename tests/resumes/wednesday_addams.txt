@@ -1,0 +1,16 @@
+Wednesday Addams
+Email: wednesday.addams@example.com
+Phone: +57 300 123 4567
+Location: Nevermore Academy, Jericho
+
+Summary:
+3 years of experience developing web applications.
+
+Experience:
+- Web Application Developer at Nevermore Academy Projects (3 years)
+
+Education:
+- B.Sc. in Computer Science, Nevermore Academy
+
+Technical Skills:
+JS, React.js, NodeJS, Postgres, Git, REST APIs.
