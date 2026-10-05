@@ -16,7 +16,7 @@ if the skills found in a resume satisfy a formally defined profile pattern.
 | `src/extractor.py` | Regular expressions | resume text | dict with raw data and skills |
 | `src/normalizer.py` | Finite-state transducers | list of raw skills | list of canonical skills (sorted) |
 | `src/classifier.py` | Finite automata | canonical skills | ACCEPTED / REJECTED per profile |
-| `src/profile_dsl/` | Context-free grammar (textX) | profile text | validated model |
+| `src/candidate.tx`, `src/profile_language.py` | Context-free grammar (textX) | profile text | validated model |
 | `src/visualizer.py` | - | validated model | HTML / Markdown file |
 | `src/main.py` | - | resume file | runs the whole pipeline |
 
