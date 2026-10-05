@@ -1,0 +1,7 @@
+// syntax error: evaluation block is missing
+candidate "John Smith" {
+    contact {
+        email: john.smith@example.com
+    }
+    skills { PYTHON SQL }
+}

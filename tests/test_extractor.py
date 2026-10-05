@@ -64,6 +64,9 @@ class TestSections(unittest.TestCase):
         self.assertEqual(school["degree"], "B.Sc. in Computer Science")
         self.assertEqual(school["institution"], "Nevermore Academy")
 
+    def test_summary(self):
+        self.assertEqual(self.data["summary"], "3 years of experience developing web applications.")
+
     def test_no_sections(self):
         data = extract("John Smith\nno more info")
         self.assertEqual(data["experience"], [])

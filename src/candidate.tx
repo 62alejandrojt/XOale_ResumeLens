@@ -1,0 +1,60 @@
+/*
+  Candidate profile language for ResumeLens (textX grammar)
+*/
+
+CandidateProfile:
+    'candidate' name=STRING '{'
+        contact=Contact
+        ('summary' ':' summary=STRING)?
+        experience=Experience?
+        education=Education?
+        skills=Skills
+        evaluation=Evaluation
+    '}'
+;
+
+Contact:
+    'contact' '{'
+        'email' ':' email=Email
+        ('phone' ':' phone=Phone)?
+        ('location' ':' location=STRING)?
+    '}'
+;
+
+Experience:
+    'experience' '{' jobs+=Job '}'
+;
+
+Job:
+    'job' role=STRING 'at' company=STRING 'years' ':' years=INT
+;
+
+Education:
+    'education' '{' records+=Degree '}'
+;
+
+Degree:
+    'degree' title=STRING 'at' institution=STRING
+;
+
+Skills:
+    'skills' '{' names*=SkillName '}'
+;
+
+Evaluation:
+    'evaluation' '{' results+=Result '}'
+;
+
+Result:
+    'profile' profile=ProfileName ':' status=Status
+;
+
+// terminals
+Email: /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/;
+Phone: /\+?[0-9][0-9 -]{6,}[0-9]/;
+SkillName: /[A-Z][A-Z0-9_]*/;
+ProfileName: 'FULL_STACK_DEVELOPER' | 'MACHINE_LEARNING_ENGINEER'
+           | 'DEVOPS_ENGINEER' | 'DATA_ANALYST';
+Status: 'ACCEPTED' | 'REJECTED';
+
+Comment: /\/\/.*$/;

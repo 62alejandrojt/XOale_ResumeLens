@@ -90,6 +90,10 @@ def extract(text):
     data["phone"] = first_match(PHONE_RE, text)
     data["location"] = first_match(LOCATION_RE, text)
 
+    # summary lines joined in one sentence
+    summary = get_section(text, "Summary")
+    data["summary"] = " ".join(summary.split()) if summary else None
+
     years = first_match(YEARS_RE, text)
     data["years_experience"] = int(years) if years else 0
 
