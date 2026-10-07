@@ -1,0 +1,15 @@
+Lisa Simpson
+Email: lisa.simpson@springfield.edu
+Location: Springfield
+
+Summary:
+2 years of experience in data analysis for public education reports.
+
+Experience:
+- Data Analyst at Springfield Elementary Board (2 years)
+
+Education:
+- B.Sc. in Statistics, Springfield University
+
+Technical Skills:
+SQL, Excel, Power BI, Tableau, MySQL.
