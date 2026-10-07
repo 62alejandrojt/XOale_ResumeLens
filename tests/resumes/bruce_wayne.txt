@@ -1,0 +1,17 @@
+Bruce Wayne
+Email: bruce.wayne@wayne-enterprises.com
+Phone: +1 555 010 2030
+Location: Gotham City
+
+Summary:
+5+ years of experience automating infrastructure and deployments.
+
+Experience:
+- DevOps Engineer at Wayne Enterprises (4 years)
+- System Administrator at Gotham Labs (1 year)
+
+Education:
+- B.Sc. in Systems Engineering, Gotham University
+
+Technical Skills:
+Python, Linux, Docker, K8s, Jenkins, CI/CD, AWS, GitHub.
