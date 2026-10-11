@@ -1,0 +1,10 @@
+// lexical error: email without domain
+candidate "John Smith" {
+    contact {
+        email: john.smith@
+    }
+    skills { PYTHON }
+    evaluation {
+        profile DATA_ANALYST: REJECTED
+    }
+}

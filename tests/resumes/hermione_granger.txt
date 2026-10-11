@@ -1,0 +1,18 @@
+Hermione Granger
+Email: hermione.granger@hogwarts.edu
+Phone: 300 555 1234
+Location: London
+
+Summary:
+4 years of experience building machine-learning models and reports.
+
+Experience:
+- Machine Learning Engineer at Ministry Analytics (3 years)
+- Research Assistant at Hogwarts Library (1 year)
+
+Education:
+- M.Sc. in Artificial Intelligence, Hogwarts University
+- B.Sc. in Mathematics, Hogwarts University
+
+Technical Skills:
+Python, NumPy, pandas, sklearn, Py Torch, SQL, PowerBI, Git.

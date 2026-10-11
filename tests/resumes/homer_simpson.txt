@@ -1,0 +1,12 @@
+Homer Simpson
+Email: homer.simpson@springfield-plant.com
+Location: Springfield
+
+Summary:
+10 years of experience as a safety inspector.
+
+Experience:
+- Safety Inspector at Springfield Nuclear Plant (10 years)
+
+Technical Skills:
+Excel, PHP, Java.

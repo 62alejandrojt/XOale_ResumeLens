@@ -1,0 +1,24 @@
+// valid profile written by hand
+candidate "Wednesday Addams" {
+    contact {
+        email: wednesday.addams@example.com
+        phone: +57 300 123 4567
+        location: "Nevermore Academy, Jericho"
+    }
+    summary: "3 years of experience developing web applications."
+    experience {
+        job "Web Application Developer" at "Nevermore Academy Projects" years: 3
+    }
+    education {
+        degree "B.Sc. in Computer Science" at "Nevermore Academy"
+    }
+    skills {
+        JAVASCRIPT REACT NODE_JS POSTGRESQL GIT REST_API
+    }
+    evaluation {
+        profile FULL_STACK_DEVELOPER: ACCEPTED
+        profile MACHINE_LEARNING_ENGINEER: REJECTED
+        profile DEVOPS_ENGINEER: REJECTED
+        profile DATA_ANALYST: REJECTED
+    }
+}

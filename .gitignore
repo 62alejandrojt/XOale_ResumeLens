@@ -4,5 +4,4 @@ __pycache__/
 venv/
 .vscode/
 .idea/
-output/*
-!output/.gitkeep
+output/
