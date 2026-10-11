@@ -64,12 +64,13 @@ Accepts: `wednesday.addams@example.com`. Rejects: `wednesday.addams@`.
 ### 3. Phone
 
 ```
-(?:\+\d{1,3}[ -]?)?\(?\d{3}\)?[ -]?\d{3}[ -]?\d{4}
+(?:\+\d{1,3}[ .-]?)?\(?\d{3}\)?[ .-]?\d{3}[ .-]?\d{4}
 ```
 
 Language: an optional country code (`+57`), then groups of 3, 3 and 4 digits
-separated by an optional space or dash.
-Accepts: `+57 300 123 4567`, `315 987 6543`, `(315)987-6543`. Rejects: `12345`.
+separated by an optional space, dot or dash. The separator is the character
+class `[ .-]`, so adding the dot only makes the language bigger; it is still regular.
+Accepts: `+57 300 123 4567`, `315 987 6543`, `(315)987-6543`, `300.123.4567`. Rejects: `12345`.
 
 ### 4. Location
 
@@ -135,9 +136,9 @@ not found inside `JavaScript`. All skill regexes are case insensitive.
 | languages | `java\s?script \| type\s?script \| python \| java \| c\+\+ \| c# \| php \| sql \| js \| ts` | JS, Javascript, Java Script, SQL |
 | frameworks | `react(\.?js)? \| angular(\.?js)? \| vue(\.?js)? \| node(\.?js)? \| express(\.?js)? \| django \| flask \| spring\s?boot` | React.js, ReactJS, NodeJS, Node.js |
 | libraries | `pandas \| numpy \| scikit[\s-]?learn \| sklearn \| tensor\s?flow \| py\s?torch \| keras` | Scikit-learn, scikit learn, Tensor Flow |
-| databases | `postgre(s\|sql) \| mysql \| sqlite \| mongo\s?db \| redis \| no\s?sql` | Postgres, PostgreSQL, MongoDB |
+| databases | `postgre(s\|sql) \| mysql \| sqlite \| mongo(\s?db)? \| redis \| no\s?sql` | Postgres, PostgreSQL, MongoDB, Mongo |
 | tools | `github \| gitlab \| git \| docker \| kubernetes \| k8s \| linux \| jenkins \| aws \| azure \| ci\s?/\s?cd \| rest(ful)?\s?apis? \| excel \| power\s?bi \| tableau` | Git, REST APIs, CI/CD, Power BI |
-| concepts | `machine[\s-]learning \| deep[\s-]learning \| predictive\s+models? \| data\s+analysis` | machine learning, predictive models |
+| concepts | `machine[\s-]learning \| ml \| deep[\s-]learning \| predictive\s+models? \| data\s+analysis` | machine learning, ML, predictive models |
 
 Each category is a **union** of simple regular expressions, so each one is
 still a regular language. Optional parts (`\.?js`, `\s?`) let the same regex

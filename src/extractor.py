@@ -9,8 +9,8 @@ NAME_RE = re.compile(r"^[ \t]*([A-Z][a-zA-Z'-]+(?:[ \t]+[A-Z][a-zA-Z'-]+)+)[ \t]
 # user@domain.ext
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 
-# optional country code + 3-3-4 digits
-PHONE_RE = re.compile(r"(?:\+\d{1,3}[ -]?)?\(?\d{3}\)?[ -]?\d{3}[ -]?\d{4}")
+# optional country code + 3-3-4 digits (space, dot or dash between groups)
+PHONE_RE = re.compile(r"(?:\+\d{1,3}[ .-]?)?\(?\d{3}\)?[ .-]?\d{3}[ .-]?\d{4}")
 
 # text after "Location:"
 LOCATION_RE = re.compile(r"^Location:[ \t]*(.+)$", re.MULTILINE | re.IGNORECASE)
@@ -35,10 +35,10 @@ SKILL_PATTERNS = {
     "frameworks": r"react(?:\.?js)?|angular(?:\.?js)?|vue(?:\.?js)?|node(?:\.?js)?"
                   r"|express(?:\.?js)?|django|flask|spring\s?boot",
     "libraries": r"pandas|numpy|scikit[\s-]?learn|sklearn|tensor\s?flow|py\s?torch|keras",
-    "databases": r"postgre(?:s|sql)|mysql|sqlite|mongo\s?db|redis|no\s?sql",
+    "databases": r"postgre(?:s|sql)|mysql|sqlite|mongo(?:\s?db)?|redis|no\s?sql",
     "tools": r"github|gitlab|git|docker|kubernetes|k8s|linux|jenkins|aws|azure"
              r"|ci\s?/\s?cd|rest(?:ful)?\s?apis?|excel|power\s?bi|tableau",
-    "concepts": r"machine[\s-]learning|deep[\s-]learning|predictive\s+models?|data\s+analysis",
+    "concepts": r"machine[\s-]learning|ml|deep[\s-]learning|predictive\s+models?|data\s+analysis",
 }
 
 

@@ -8,14 +8,14 @@ python -m unittest discover tests -v
 
 | File | Stage | Number of tests |
 |---|---|---|
-| `test_extractor.py` | 1 - Regular expressions | 18 |
-| `test_normalizer.py` | 2 - Transducers | 20 |
+| `test_extractor.py` | 1 - Regular expressions | 20 |
+| `test_normalizer.py` | 2 - Transducers | 22 |
 | `test_classifier.py` | 3 - Automata | 26 |
 | `test_profile_language.py` | 4 - Grammar (textX) | 17 |
 | `test_visualizer.py` | 5 - Visualization | 8 |
 | `test_main.py` | Main program | 3 |
 | `test_scenarios.py` | Whole pipeline | 15 |
-| **Total** | | **107** |
+| **Total** | | **111** |
 
 ## Scenarios (test data)
 
@@ -47,6 +47,7 @@ Setup: the text of S1 is stored in the constant `WEDNESDAY`.
 | | test_location | S1 text | `Nevermore Academy, Jericho` |
 | | test_years | S1 text | `3` |
 | | test_invalid_email | `wednesday.addams@` | no match |
+| | test_phone_with_dots | `300.123.4567` | `300.123.4567` |
 | | test_short_phone | `call 12345` | no match |
 | TestSections | test_experience | S1 text | role, company and 3 years |
 | | test_education | S1 text | degree and institution |
@@ -58,6 +59,7 @@ Setup: the text of S1 is stored in the constant `WEDNESDAY`.
 | | test_spaced_variants | `Tensor Flow, Py Torch, scikit learn` | the three are found |
 | | test_sql_not_inside_postgresql | `PostgreSQL` | only database, not SQL |
 | | test_no_repeated_skills | `Git, Git, Git` | `Git` once |
+| | test_short_names | `Mongo and ML, not HTML` | `Mongo` and `ML` found, nothing inside `HTML` |
 | | test_concepts | `machine learning models` | `machine learning` |
 
 ## Stage 2 - Normalization (`test_normalizer.py`)
@@ -77,6 +79,8 @@ Setup: the text of S1 is stored in the constant `WEDNESDAY`.
 | | test_spaced_names | Tensor Flow, Py Torch | `TENSORFLOW`, `PYTORCH` |
 | | test_rest | REST API, REST APIs, RESTful API | `REST_API` |
 | | test_concept | machine learning, predictive models | `MACHINE_LEARNING` |
+| | test_mongo | Mongo, MongoDB, Mongo DB | `MONGODB` (nondeterministic path) |
+| | test_ml | ML, ml | `MACHINE_LEARNING` |
 | | test_unknown | `Cobol`, `react native app`, empty | `None` |
 | | test_incomplete_variant | `Tensor` | `None` (ends in non-final state) |
 | TestNormalizeList | test_repeated_variants | `JS, Javascript, Cobol` | `[JAVASCRIPT]`, unknown `[Cobol]` |

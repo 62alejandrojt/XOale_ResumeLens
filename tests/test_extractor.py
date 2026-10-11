@@ -44,6 +44,10 @@ class TestContactData(unittest.TestCase):
     def test_invalid_email(self):
         self.assertIsNone(EMAIL_RE.search("wednesday.addams@"))
 
+    def test_phone_with_dots(self):
+        match = PHONE_RE.search("Phone: 300.123.4567")
+        self.assertEqual(match.group(0), "300.123.4567")
+
     def test_short_phone(self):
         self.assertIsNone(PHONE_RE.search("call 12345"))
 
@@ -100,6 +104,11 @@ class TestSkills(unittest.TestCase):
     def test_no_repeated_skills(self):
         skills = find_skills("Git, Git, Git")
         self.assertEqual(skills["tools"], ["Git"])
+
+    def test_short_names(self):
+        skills = find_skills("Mongo and ML, not HTML")
+        self.assertEqual(skills["databases"], ["Mongo"])
+        self.assertEqual(skills["concepts"], ["ML"])
 
     def test_concepts(self):
         skills = find_skills("I build machine learning models")

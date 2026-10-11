@@ -55,6 +55,13 @@ class TestNormalizeSkill(unittest.TestCase):
     def test_concept(self):
         self.check(["machine learning", "Machine-learning", "predictive models"], "MACHINE_LEARNING")
 
+    def test_mongo(self):
+        # "mongo" alone is a skill and also the start of "mongo db"
+        self.check(["Mongo", "MongoDB", "Mongo DB"], "MONGODB")
+
+    def test_ml(self):
+        self.check(["ML", "ml"], "MACHINE_LEARNING")
+
     def test_unknown(self):
         self.assertIsNone(normalize_skill("Cobol"))
         self.assertIsNone(normalize_skill("react native app"))
