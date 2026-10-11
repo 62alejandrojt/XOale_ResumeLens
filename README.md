@@ -122,6 +122,9 @@ Only the name and email are required. Skills are searched in the whole text.
 | [06_visualization.md](docs/06_visualization.md) | HTML / Markdown output and main program |
 | [07_tests.md](docs/07_tests.md) | test cases and scenarios |
 
+## Poster
+- [Research poster](docs/poster/Poster.pdf)
+
 ## Team
 
 - Brayan Alejandro Jimenez Timana - A00430989
