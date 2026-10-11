@@ -64,12 +64,13 @@ Accepts: `wednesday.addams@example.com`. Rejects: `wednesday.addams@`.
 ### 3. Phone
 
 ```
-(?:\+\d{1,3}[ -]?)?\(?\d{3}\)?[ -]?\d{3}[ -]?\d{4}
+(?:\+\d{1,3}[ .-]?)?\(?\d{3}\)?[ .-]?\d{3}[ .-]?\d{4}
 ```
 
 Language: an optional country code (`+57`), then groups of 3, 3 and 4 digits
-separated by an optional space or dash.
-Accepts: `+57 300 123 4567`, `315 987 6543`, `(315)987-6543`. Rejects: `12345`.
+separated by an optional space, dot or dash. The separator is the character
+class `[ .-]`, so adding the dot only makes the language bigger; it is still regular.
+Accepts: `+57 300 123 4567`, `315 987 6543`, `(315)987-6543`, `300.123.4567`. Rejects: `12345`.
 
 ### 4. Location
 

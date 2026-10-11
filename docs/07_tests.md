@@ -8,14 +8,14 @@ python -m unittest discover tests -v
 
 | File | Stage | Number of tests |
 |---|---|---|
-| `test_extractor.py` | 1 - Regular expressions | 18 |
+| `test_extractor.py` | 1 - Regular expressions | 19 |
 | `test_normalizer.py` | 2 - Transducers | 20 |
 | `test_classifier.py` | 3 - Automata | 26 |
 | `test_profile_language.py` | 4 - Grammar (textX) | 17 |
 | `test_visualizer.py` | 5 - Visualization | 8 |
 | `test_main.py` | Main program | 3 |
 | `test_scenarios.py` | Whole pipeline | 15 |
-| **Total** | | **107** |
+| **Total** | | **108** |
 
 ## Scenarios (test data)
 
@@ -47,6 +47,7 @@ Setup: the text of S1 is stored in the constant `WEDNESDAY`.
 | | test_location | S1 text | `Nevermore Academy, Jericho` |
 | | test_years | S1 text | `3` |
 | | test_invalid_email | `wednesday.addams@` | no match |
+| | test_phone_with_dots | `300.123.4567` | `300.123.4567` |
 | | test_short_phone | `call 12345` | no match |
 | TestSections | test_experience | S1 text | role, company and 3 years |
 | | test_education | S1 text | degree and institution |

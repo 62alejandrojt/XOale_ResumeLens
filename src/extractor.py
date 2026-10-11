@@ -9,8 +9,8 @@ NAME_RE = re.compile(r"^[ \t]*([A-Z][a-zA-Z'-]+(?:[ \t]+[A-Z][a-zA-Z'-]+)+)[ \t]
 # user@domain.ext
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 
-# optional country code + 3-3-4 digits
-PHONE_RE = re.compile(r"(?:\+\d{1,3}[ -]?)?\(?\d{3}\)?[ -]?\d{3}[ -]?\d{4}")
+# optional country code + 3-3-4 digits (space, dot or dash between groups)
+PHONE_RE = re.compile(r"(?:\+\d{1,3}[ .-]?)?\(?\d{3}\)?[ .-]?\d{3}[ .-]?\d{4}")
 
 # text after "Location:"
 LOCATION_RE = re.compile(r"^Location:[ \t]*(.+)$", re.MULTILINE | re.IGNORECASE)
