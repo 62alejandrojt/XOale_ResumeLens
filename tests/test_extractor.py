@@ -105,6 +105,11 @@ class TestSkills(unittest.TestCase):
         skills = find_skills("Git, Git, Git")
         self.assertEqual(skills["tools"], ["Git"])
 
+    def test_short_names(self):
+        skills = find_skills("Mongo and ML, not HTML")
+        self.assertEqual(skills["databases"], ["Mongo"])
+        self.assertEqual(skills["concepts"], ["ML"])
+
     def test_concepts(self):
         skills = find_skills("I build machine learning models")
         self.assertEqual(skills["concepts"], ["machine learning"])

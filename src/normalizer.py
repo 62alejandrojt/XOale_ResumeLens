@@ -40,7 +40,7 @@ RULES = {
         "POSTGRESQL": ["postgres", "postgresql"],
         "MYSQL": ["mysql"],
         "SQLITE": ["sqlite"],
-        "MONGODB": ["mongodb", "mongo db"],
+        "MONGODB": ["mongodb", "mongo db", "mongo"],
         "REDIS": ["redis"],
         "NOSQL": ["nosql", "no sql"],
     },
@@ -61,7 +61,7 @@ RULES = {
         "TABLEAU": ["tableau"],
     },
     "concepts": {
-        "MACHINE_LEARNING": ["machine learning", "predictive model", "predictive models"],
+        "MACHINE_LEARNING": ["machine learning", "ml", "predictive model", "predictive models"],
         "DEEP_LEARNING": ["deep learning"],
         "DATA_ANALYSIS": ["data analysis"],
     },

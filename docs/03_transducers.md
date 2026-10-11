@@ -34,6 +34,7 @@ skill (JAVA) but also the start of `java script` (JAVASCRIPT). From `q0` with
 `java` there are two transitions: one to `qf` writing `JAVA` and one to `q_java`
 writing ε. Only the path that ends in `qf` after reading all tokens is
 accepted, so `java` gives `JAVA` and `java script` gives `JAVASCRIPT`.
+The same happens in T4 with `mongo` (MONGODB) and `mongo db` (MONGODB).
 pyformlang explores all paths in `translate`.
 
 **One transducer per category.** There are six transducers (languages,
@@ -248,6 +249,7 @@ T4 = (Q, Σ, Γ, δ, ω, q0, F)
 | From | Input (Σ) | To (δ) | Output (ω) |
 |---|---|---|---|
 | q0 | `mongo` | q_mongo | ε |
+| q0 | `mongo` | qf | MONGODB |
 | q0 | `mongodb` | qf | MONGODB |
 | q0 | `mysql` | qf | MYSQL |
 | q0 | `no` | q_no | ε |
@@ -270,6 +272,7 @@ stateDiagram-v2
     q0 --> qf : sqlite / SQLITE
     q0 --> qf : mongodb / MONGODB
     q0 --> q_mongo : mongo / ε
+    q0 --> qf : mongo / MONGODB
     q_mongo --> qf : db / MONGODB
     q0 --> qf : redis / REDIS
     q0 --> qf : nosql / NOSQL
@@ -355,7 +358,7 @@ stateDiagram-v2
 T6 = (Q, Σ, Γ, δ, ω, q0, F)
 
 - **Q** = {q0, q_data, q_deep, q_machine, q_predictive, qf}
-- **Σ** = {analysis, data, deep, learning, machine, model, models, predictive}
+- **Σ** = {analysis, data, deep, learning, machine, ml, model, models, predictive}
 - **Γ** = {DATA_ANALYSIS, DEEP_LEARNING, MACHINE_LEARNING}
 - **q0** = q0
 - **F** = {qf}
@@ -366,6 +369,7 @@ T6 = (Q, Σ, Γ, δ, ω, q0, F)
 | q0 | `data` | q_data | ε |
 | q0 | `deep` | q_deep | ε |
 | q0 | `machine` | q_machine | ε |
+| q0 | `ml` | qf | MACHINE_LEARNING |
 | q0 | `predictive` | q_predictive | ε |
 | q0 | `predictive` | q_predictive | ε |
 | q_data | `analysis` | qf | DATA_ANALYSIS |
@@ -381,6 +385,7 @@ stateDiagram-v2
     [*] --> q0
     q0 --> q_machine : machine / ε
     q_machine --> qf : learning / MACHINE_LEARNING
+    q0 --> qf : ml / MACHINE_LEARNING
     q0 --> q_predictive : predictive / ε
     q0 --> q_predictive : predictive / ε
     q_predictive --> qf : model / MACHINE_LEARNING
